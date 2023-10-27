@@ -8,9 +8,11 @@ export default function(){
                     <div>
                         <Link href="/">Home</Link>
                     </div>
-                    <div>Profile</div>
+                    <div>
+                        <Link href="/profile">Profile</Link>
+                    </div>
                 </div>
-                <h1 className="mt-5 mb-5">QuickJob Listings</h1>
+                <h1 className="mt-5 mb-5">Cart Listings</h1>
                 
             </div>
             
