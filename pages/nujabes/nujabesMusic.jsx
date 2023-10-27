@@ -1,8 +1,20 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
+
+
+
 
 
 export default function nujabesMusic(){
+
+    const [music, setMusic] = useState(false)
+
+
+    function showMusic(){
+        setMusic(!music)
+    }
+
     return(
         <main id='background'>
             <Image
@@ -12,7 +24,8 @@ export default function nujabesMusic(){
             />
             <h1>music</h1>
 
-            <button>My favorite Nujabes music</button>
+            <button onClick={showMusic}>My favorite Nujabes music</button>
+            {music && (<div>Music</div>) }
         </main>
     )
 }
