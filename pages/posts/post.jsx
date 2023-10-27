@@ -13,6 +13,7 @@ export default function(){
     return (
         <main>
             <div className="max-w-xs bg-gray-950 border-2 rounded-md border-gray-800 font-thin">
+                
                 <div className="flex justify-between ml-4 mr-4 mt-2">
                     <div>
                         <Link href="/">Home</Link>

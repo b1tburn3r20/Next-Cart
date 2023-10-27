@@ -9,6 +9,7 @@ export default function Home() {
     <main className='font-thin'>
       <div className="max-w-sm border-2 rounded-md border-neutral-800 p-2">
       <p className='flex justify-end p-2 '>
+        <Link href="/nujabes/nujabesMusic">Music</Link>
         <Link  className='bg-neutral-800 rounded-full p-2 font-thin' href="/posts/post">Active Chores</Link>
       </p>
       <header className='flex justify-center font-thin text-3xl border-neutral-800 border-2 p-2 rounded-full'>Rent-Rocket!</header>
