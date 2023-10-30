@@ -22,22 +22,7 @@ export default function(){
                         <Link href="/profile">Profile</Link>
                     </div>
                 </div>
-                <div>
-                    <p>Want to create a chore listing?</p>
-                    <button onClick={showChoreCreateDropDown} className="bg-white rounded-full p-2 text-black" id="chore-drop-down-button">Create Chore Listing</button>
                 </div>
-                {choreDropDown && (
-                    <div>
-                        <input type="text" placeholder="Enter chore name.."/>
-                        <button id="add-chore-button">Add Chore</button>
-                    </div>
-                )}
-                <div className="flex justify-center">
-                    <h1 className="mt-5 mb-5">Active Chores</h1>
-                    <div id="chore-bounties"></div>
-                </div>
-                
-            </div>
             
         </main>
     )
