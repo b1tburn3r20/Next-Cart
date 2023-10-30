@@ -2,9 +2,10 @@ import Link from 'next/link'
 
 export default function Navbar(){
     return(
-        <>
-            <Link href="/nujabes/nujabesMusic">Nujabes Tribute</Link>
-            <Link  className='bg-neutral-800 rounded-full p-2 font-thin' href="/posts/post">Active Chores</Link>
-        </>
+        <div className='flex justify-between items-center'>
+            <Link className='border p-1 pl-3 pr-3 m-1 rounded-full'  href="/nujabes/nujabesMusic">Nujabes Tribute</Link>
+            <Link  className='border p-1 pl-3 pr-3 m-1 rounded-full' href="/posts/post">Goals</Link>
+            <Link className='border p-1 pl-3 pr-3 m-1 rounded-full' href="/">Home</Link>
+        </div>
     )
 }

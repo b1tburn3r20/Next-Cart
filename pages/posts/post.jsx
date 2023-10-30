@@ -1,29 +1,39 @@
-import Link from "next/link"
-import { useState } from "react"
+import Navbar from "@/components/Navbar/navbar"
+import Head from "next/head"
+import Image from 'next/image'
+import { useRef } from "react"
 
 
 export default function(){
 
-    const [choreDropDown, setChoreDropDown] = useState(false)
+    const goalsListRef = useRef(null)
+    const inputRef = useRef(null)
 
-    function showChoreCreateDropDown(){
-        setChoreDropDown(!choreDropDown)
+    const addListItem = () => {
+        const item = document.createElement('li')
+        item.textContent=inputRef.current.value;
+        goalsListRef.current.appendChild(item)
     }
 
     return (
-        <main>
-            <div className="max-w-xs bg-gray-950 border-2 rounded-md border-gray-800 font-thin">
-                
-                <div className="flex justify-between ml-4 mr-4 mt-2">
-                    <div>
-                        <Link href="/">Home</Link>
-                    </div>
-                    <div>
-                        <Link href="/profile">Profile</Link>
-                    </div>
-                </div>
-                </div>
+        <main className="max-w-sm border rounded-lg">
+            <Head>
+                <title>Goals</title>
+            </Head>
+            <Navbar />
+            <div className="flex justify-center">
+            <Image 
+            src="/goals.png"
+            width={150}
+            height={150}
+            />
+            </div>
             
+            <input className="border p-1 pl-3 pr-3 m-3 rounded-full" type="text" ref={inputRef}/>
+            <button className="border p-1 pr-3 pl-3 rounded-full" onClick={addListItem}>Add Item</button>
+            <div  ref={goalsListRef} placeholder="type something">
+            
+            </div>
         </main>
     )
 }
